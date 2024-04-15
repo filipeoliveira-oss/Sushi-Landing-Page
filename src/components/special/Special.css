@@ -1,0 +1,100 @@
+.SpecialContainer{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    margin-top: 1rem;
+    position: relative;
+    overflow: hidden;
+    gap: 5rem;
+}
+
+.SpecialTitle{
+    align-self: center;
+    font-weight: 300;
+}
+
+.SpecialRecipeContainer{
+    /* border: 1px solid yellow; */
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.SpecialRecipeTitle{
+    font-weight: 300;
+    font-size: xx-large;
+}
+.SpecialRecipeUl{
+    margin-top: 2rem;
+    font-weight: 200;
+}
+
+.SpecialRecipeUl:before{
+    content:attr(aria-label);
+    font-size:120%;
+    font-weight:200;
+    /* margin-left:-15px; */
+}
+
+.SpecialRecipeLi:first-child{
+    margin-top: .5rem;
+    margin-left: 2rem;
+}
+
+.SpecialRecipeLi{
+    margin-top: .2rem;
+    margin-left: 2rem;
+}
+
+.SpecialSpinner{
+    position: absolute;
+    top: -17rem;
+    right: -40rem;
+    animation-name: rotate;
+    animation-duration: 10000ms;
+    animation-iteration-count: infinite;
+    
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg)
+      }
+      8.33% {
+        transform: rotate(90deg)
+      }
+      25% {
+        transform: rotate(90deg)
+      }
+      33.33% {
+        transform: rotate(180deg)
+      }
+      50% {
+        transform: rotate(180deg)
+      }
+      58.33% {
+        transform: rotate(270deg)
+      }
+      75% {
+        transform: rotate(270deg)
+      }
+      83.33% {
+        transform: rotate(360deg)
+      }
+      100% {
+        transform: rotate(360deg)
+      }
+}
+
+@media screen and (max-width: 850px) {
+  .SpecialSpinner{
+    display: none;
+  }
+
+  .SpecialRecipeContainer{
+    justify-self:center;
+    align-self: center;
+  }
+}

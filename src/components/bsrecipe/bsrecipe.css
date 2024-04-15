@@ -1,0 +1,141 @@
+button{
+    all: unset;
+}
+
+@keyframes orderArrow {
+    25%{
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    50%{
+        transform: translateX(-200%);
+    }
+    75%{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+}
+
+.bsrecipeContainer{
+    width: 100%;
+    /* border: 1px solid yellow; */
+    padding-top: 2rem;
+    padding-bottom: 2rem ;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.bsrecipeContainer:nth-child(1){
+    margin-top: 3rem;
+}
+
+.bsrecipeImageContainer{
+    width: 30%;
+    height: 6rem;
+    background-image: url('../../assets/images/pattern.jpg');
+    position: relative;
+    order: 1;
+}
+
+.bsrecipeImage{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    transform: translateY(-25%) translateX(50%);
+}
+
+.bsrecipeNameContainer{
+    /* border: 1px solid green; */
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
+    gap: 2rem;
+    order: 2;
+}
+
+.bsrecipeName{
+    font-weight: 300;
+}
+
+.bsrecipeOrder{
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 6rem;
+    height: 2rem;
+    padding-left: .5rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: all .5s;
+}
+
+.bsrecipeOrderArrow{
+   stroke-width: 2px;
+}
+
+.bsrecipeOrder:hover > .bsrecipeOrderArrow{
+    animation-name: orderArrow;
+    animation-duration: .5s;
+}
+
+.bsrecipeOrder:hover{
+    scale: 1.1;
+}
+
+.right > .bsrecipeNameContainer{
+    order: 1;
+}
+
+.right > .bsrecipeImageContainer{
+    order: 2;
+}
+.right > .bsrecipeImageContainer > .bsrecipeImage{
+    left: 0;
+    transform: translateX(-50%) translateY(-25%);
+}
+
+.left{
+    transform: translateX(-100%);
+}
+.right{
+    transform: translateX(100%);
+}
+.appearRecipe {
+    animation-name: appearRecipe;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes appearRecipe {
+    to{
+        transform: translateX(0);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .bsrecipeName{
+        display: none;
+    }
+}
+
+@media (scripting: none) {
+    .left{
+        transform: translateX(0);
+    }
+    .right{
+        transform: translateX(0);
+    }
+  }

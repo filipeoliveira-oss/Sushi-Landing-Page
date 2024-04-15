@@ -1,0 +1,40 @@
+.SpinnerContainer{
+    display: inline-grid;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr / 1fr 1fr 1fr;
+}
+
+#um{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    border-radius: 50%;
+}
+
+#dois{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+#tres{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    rotate: -90deg;
+}
+
+#quatro{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    rotate: -90deg;
+}
+
+.SpinnerPhoto{
+    width: 20rem;
+    height: 20rem;
+}

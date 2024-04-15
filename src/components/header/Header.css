@@ -1,0 +1,105 @@
+.HeaderContainer{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 4rem;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    position: fixed;
+    border: 1px solid transparent;
+    transition: all .5s;
+    z-index: 2;
+}
+
+.HeaderTitle{
+    width: 10%;
+    height: 80%;
+    background-color: #fff;
+    border-radius: 20px 0px 20px 0px;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+@media screen and (max-width: 1160px) {
+    .HeaderTitle{
+        position: absolute;
+        top: 150%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .HeaderTitle{
+        display: none;
+    }
+}
+
+.HeaderActions{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    margin-left: 2rem;
+    color: #fff;
+    align-items: center;
+    /* border: 1px solid yellow; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: calc(50%);
+    transform: translateX(-50%);
+    justify-content: center;
+}
+
+.HeaderUl{
+    padding: 0;
+    display: flex;
+    list-style: none;
+    overflow: hidden;
+    justify-content: start;
+    align-items: flex-start;
+}
+
+.HeaderLi{
+    display: flex;
+    flex-direction: column;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 0.2rem;
+    cursor: pointer;
+    width: fit-content;
+    position: relative;
+    user-select: none;
+}
+
+.offset{
+    
+/* From https://css.glass */
+background: rgba(133, 132, 132, 0.2);
+/* border-radius: 16px; */
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+@media (scripting: none) {
+    .HeaderContainer{
+        /* From https://css.glass */
+        background: rgba(133, 132, 132, 0.2);
+        /* border-radius: 16px; */
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+}
